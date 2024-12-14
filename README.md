@@ -79,3 +79,74 @@ This script is primarily for demonstration. It randomly creates a two-speech aud
 ## Results
 
 
+### Outlier Reduction
+<p float="left" style="width: 100%; display: flex; justify-content: space-between;">
+  <img src="Plots/train25_CreateErrorHistogram_WER_gt_noisy_SNR_3_zoomed.png" style="width: 49%;" />
+  <img src="Plots/train25_CreateErrorHistogram_WER_gt_processed_SNR_3_zoomed.png" style="width: 49%;" />
+</p>
+
+<p float="left" style="width: 100%; display: flex; justify-content: space-between;">
+  <img src="Plots/train25_CreateErrorHistogram_WER_gt_noisy_SNR_6_zoomed.png" style="width: 49%;" />
+  <img src="Plots/train25_CreateErrorHistogram_WER_gt_processed_SNR_6_zoomed.png" style="width: 49%;" />
+</p>
+
+
+<p float="left" style="width: 100%; display: flex; justify-content: space-between;">
+  <img src="Plots/train25_CreateErrorHistogram_WER_gt_noisy_SNR_9_zoomed.png" style="width: 49%;" />
+  <img src="Plots/train25_CreateErrorHistogram_WER_gt_processed_SNR_9_zoomed.png" style="width: 49%;" />
+</p>
+
+The above figures shows the number of outliers before and after processing with our pipeline. An outlier is defined as those signals that have a word-error-rate greater than 50\%. From the figures, the first observation is that the number of outliers have gone down by a significant number. And more importantly, we see that the outliers have moved closer to the lower WER. 
+
+### Average WER Improvement
+The following presents average WER before processing, after processing and the improvements provided by the model. The average word-error-rates are presented for the four biggest models: Large, Turbo, Medium and Small. As expected we notice that the error rates are smallest for the largest models and largest for the smaller models. After our processing, we see that there is an average improvement of 6.7\% at SNR = 3, 4.2\% at SNR=6, 1.37\% at SNR=9. 
+
+
+<div style="display: flex; justify-content: space-between;">
+
+<div style="width: 48%;">
+
+**Large**
+| **SNR** | **Noisy** | **Processed** | **Δ WER** |
+|---------|-----------|---------------|-----------|
+| 3       | 24.1%     | 17.3%         | 6.8%      |
+| 6       | 13.9%     | 9.3%          | 4.6%      |
+| 9       | 7.1%      | 6.1%          | 1.0%      |
+</div>
+
+<div style="width: 48%;">
+
+**Turbo**
+| **SNR** | **Noisy** | **Processed** | **Δ WER** |
+|---------|-----------|---------------|-----------|
+| 3       | 27.88%    | 20.24%        | 7.64%     |
+| 6       | 14.52%    | 10.34%        | 4.18%     |
+| 9       | 7.79%     | 6.26%         | 1.53%     |
+</div>
+
+</div>
+
+
+<div style="display: flex; justify-content: space-between;">
+
+<div style="width: 48%;">
+
+**Medium**
+| **SNR** | **Noisy** | **Processed** | **Δ WER** |
+|---------|-----------|---------------|-----------|
+| 3       | 30.21%    | 23.72%        | 6.49%     |
+| 6       | 15.57%    | 11.77%        | 3.80%     |
+| 9       | 10.13%    | 8.61%         | 1.52%     |
+</div>
+
+<div style="width: 48%;">
+
+**Small**
+| **SNR** | **Noisy** | **Processed** | **Δ WER** |
+|---------|-----------|---------------|-----------|
+| 3       | 34.40%    | 28.54%        | 5.85%     |
+| 6       | 20.73%    | 16.50%        | 4.23%     |
+| 9       | 13.96%    | 12.5%         | 1.46%     |
+</div>
+
+</div>
