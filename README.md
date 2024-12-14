@@ -31,30 +31,47 @@ So to ensure this goes as expected, please edit the entries to the variables,
 - **directory_to_save_audio**: Path to directory where sample audios are saved.
 - **directory_to_save_data**: Path to directory where pickle-data is saved. 
 
-
+<!-- =================================================== -->
+<!-- =================================================== -->
+<!-- =================================================== -->
+<!-- =================================================== -->
+<!-- =================================================== -->
+<!-- =================================================== -->
+<!-- =================================================== -->
+<!-- =================================================== -->
+<!-- =================================================== -->
+<!-- =================================================== -->
+<!-- =================================================== -->
+<!-- =================================================== -->
 ## Scripts
 
 ### Training
-Prior to training, change the training code in the following manner
+In this script, we initialize the architecture with random weights and start training the network using the adversarial framework. Step through the following to train a new network
 
-- Update path to store Whisper models. 
-- Update path to directory containing training and test-files
-- Update path where to store the trained models, stored data-objects, etc etc
-
-Run training script
-```
-python asr_enhancer_train.py
-```
+- Please follow the steps outlined in the earlier parts of this section. 
+- Run the code 
+    ```
+    python asr_enhancer_train.py
+    ```
 
 
 ### Inference
-Prior to running inference, 
-- update the path to the model, which needs to be loaded
-- Update path to where whisper is stored or loaded. 
+This script is to primarily take an existing input-audio, process it, save the output-audio and print the transcript for the input and the processed. Step through the following steps to run the script
 
-Run inference script
-```
-python asr_enhancer_demo.py
-```
+- Follow the steps outlined in the setup. 
+- Run the following code from terminal: \verb|python asr_enhancer_read_process_write.py|. 
+    ```
+    python asr_enhancer_demo.py
+    ```
 
 ### Demo
+This script is primarily for demonstration. It randomly creates a two-speech audio with the required SNR, processes it and saves the audio and produces transcripts. To run this script, step through the following
+
+- First, please follow the steps in the earlier parts of this section. 
+- Place the trained models somewhere locally, ideally in the project directory. If not available, please download from [here](https://github.com/vrsreeganesh/asr-enhancer/tree/main/Weights)
+- In the inference, code, assign the path to the variable, **modelMagnitude_path**.
+- Run the code from terminal using: 
+    ```
+    python asr_enhancer_demo.py
+    ```
+
