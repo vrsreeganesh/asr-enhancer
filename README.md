@@ -104,7 +104,7 @@ The following presents average WER before processing, after processing and the i
 
 <div style="display: flex; justify-content: space-between;">
 
-<div style="width: 48%;">
+<div style="width: 45%;">
 
 **Large**
 | **SNR** | **Noisy** | **Processed** | **Δ WER** |
@@ -114,7 +114,7 @@ The following presents average WER before processing, after processing and the i
 | 9       | 7.1%      | 6.1%          | 1.0%      |
 </div>
 
-<div style="width: 48%;">
+<div style="width: 45%;">
 
 **Turbo**
 | **SNR** | **Noisy** | **Processed** | **Δ WER** |
@@ -129,7 +129,7 @@ The following presents average WER before processing, after processing and the i
 
 <div style="display: flex; justify-content: space-between;">
 
-<div style="width: 48%;">
+<div style="width: 45%;">
 
 **Medium**
 | **SNR** | **Noisy** | **Processed** | **Δ WER** |
@@ -139,7 +139,7 @@ The following presents average WER before processing, after processing and the i
 | 9       | 10.13%    | 8.61%         | 1.52%     |
 </div>
 
-<div style="width: 48%;">
+<div style="width: 45%;">
 
 **Small**
 | **SNR** | **Noisy** | **Processed** | **Δ WER** |
